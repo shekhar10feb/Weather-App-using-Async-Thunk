@@ -138,12 +138,22 @@ Visit `http://localhost:5173`
 
 ## Environment Variables
 
-- `VITE_WEATHER_API_KEY` – Your OpenWeather API key.  
-  - Obtain a free key from [OpenWeather](https://openweathermap.org/api).  
+- `VITE_BASE_URL` - Your Base URL
+  - Obtain a Base URL from [OpenWeather](https://openweathermap.org/api).
+  - Place it in `.env` in the root folder.
+
+- `VITE_OPENWEATHER_API_KEY` - Your OpenWeather API key
+  - Obtain a free key from [OpenWeather](https://openweathermap.org/api).
+  - Place it in `.env` in the root folder.
+
+- `VITE_QUERY` - Your query
+  - Set your own query.
   - Place it in `.env` in the root folder.
 
 ```env
-VITE_WEATHER_API_KEY=your_api_key_here
+VITE_OPENWEATHER_API_KEY=your_api_key_here
+VITE_BASE_URL=your_base_url_key_here
+VITE_QUERY=your_query_key_here
 ```
 
 ---
