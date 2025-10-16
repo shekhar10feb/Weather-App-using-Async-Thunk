@@ -2,18 +2,22 @@
 
 A modern, responsive weather forecast application built with **React**, **Redux Toolkit**, **Async Thunk**, **React Router**, and **TailwindCSS**, integrating the **OpenWeather API** to display real-time weather information.
 
+Checkout the website here: [Weather App](https://boisterous-semifreddo-9383dc.netlify.app/)
+
 ---
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-4. [Project Structure](#project-structure)
-5. [Setup & Installation](#setup--installation)
-6. [Usage](#usage)
-7. [Environment Variables](#environment-variables)
-8. [Optimization & Enhancements](#optimization--enhancements)
-9. [License](#license)
+2. [Screenshot](#screenshot)
+3. [Features](#features)
+4. [Tech Stack](#tech-stack)
+5. [Project Structure](#project-structure)
+6. [Setup & Installation](#setup--installation)
+7. [Usage](#usage)
+8. [Environment Variables](#environment-variables)
+9. [Optimization & Enhancements](#optimization--enhancements)
+10. [Deployment](#deployment)
+11. [License](#license)
 
 ---
 
@@ -29,6 +33,18 @@ The Weather Forecast App allows users to:
 - Handle loading and error states efficiently.
 
 It uses Redux Toolkit for state management and `createAsyncThunk` for async API calls, ensuring a smooth user experience.
+
+---
+
+## Screenshot
+- **Task Manager Page in Dark mode and also in desktop mode**
+![Task Manager Page in Dark mode and also in desktop mode](./public/images/1.png)
+
+- **Task Manager Page in light mode and also in desktop mode**
+![Task Manager Page in light mode and also in desktop mode](./public/images/2.png)
+
+- **Task Manager Page in light mode and also in mobile screen resolution showing reponsiveness**
+![Task Manager Page in light mode and also in mobile screen resolution showing reponsiveness](./public/images/3.png)
 
 ---
 
@@ -138,12 +154,22 @@ Visit `http://localhost:5173`
 
 ## Environment Variables
 
-- `VITE_WEATHER_API_KEY` – Your OpenWeather API key.  
-  - Obtain a free key from [OpenWeather](https://openweathermap.org/api).  
+- `VITE_BASE_URL` - Your Base URL
+  - Obtain a Base URL from [OpenWeather](https://openweathermap.org/api).
+  - Place it in `.env` in the root folder.
+
+- `VITE_OPENWEATHER_API_KEY` - Your OpenWeather API key
+  - Obtain a free key from [OpenWeather](https://openweathermap.org/api).
+  - Place it in `.env` in the root folder.
+
+- `VITE_QUERY` - Your query
+  - Set your own query.
   - Place it in `.env` in the root folder.
 
 ```env
-VITE_WEATHER_API_KEY=your_api_key_here
+VITE_OPENWEATHER_API_KEY=your_api_key_here
+VITE_BASE_URL=your_base_url_key_here
+VITE_QUERY=your_query_key_here
 ```
 
 ---
@@ -160,6 +186,11 @@ VITE_WEATHER_API_KEY=your_api_key_here
   - Skeleton loaders for smoother UI.  
   - Dark/light mode toggle.  
   - Error toast notifications.  
+
+---
+
+## Deployment
+- Connected this GitHub account to Netlify account and deployed it.
 
 ---
 
