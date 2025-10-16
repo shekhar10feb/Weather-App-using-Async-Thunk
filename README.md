@@ -37,14 +37,14 @@ It uses Redux Toolkit for state management and `createAsyncThunk` for async API 
 ---
 
 ## Screenshot
-- **Task Manager Page in Dark mode and also in desktop mode**
-![Task Manager Page in Dark mode and also in desktop mode](./public/images/1.png)
+- **Website in desktop mode**
+![Website in desktop mode](./public/img1.png)
 
-- **Task Manager Page in light mode and also in desktop mode**
-![Task Manager Page in light mode and also in desktop mode](./public/images/2.png)
+- **Website searched a query and showing the weather also in tab mode**
+![Website searched a query and showing the weather also in tab mode](./public/img2.png)
 
-- **Task Manager Page in light mode and also in mobile screen resolution showing reponsiveness**
-![Task Manager Page in light mode and also in mobile screen resolution showing reponsiveness](./public/images/3.png)
+- **When a user clicked on the searched query, then it goes to other page for more datails and also in mobile screen resolution showing reponsiveness**
+![When a user clicked on the searched query, then it goes to other page for more datails and also in mobile screen resolution showing reponsiveness](./public/img3.png)
 
 ---
 
