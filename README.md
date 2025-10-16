@@ -1,0 +1,168 @@
+# 🌦️ Weather Forecast App
+
+A modern, responsive weather forecast application built with **React**, **Redux Toolkit**, **Async Thunk**, **React Router**, and **TailwindCSS**, integrating the **OpenWeather API** to display real-time weather information.
+
+---
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Project Structure](#project-structure)
+5. [Setup & Installation](#setup--installation)
+6. [Usage](#usage)
+7. [Environment Variables](#environment-variables)
+8. [Optimization & Enhancements](#optimization--enhancements)
+9. [License](#license)
+
+---
+
+## Overview
+
+The Weather Forecast App allows users to:
+
+- Search for current weather by city name.
+- View temperature, humidity, and weather description with icons.
+- Save favorite cities for quick access.
+- Store last searched city for fast navigation.
+- Navigate between home page and city-specific weather page.
+- Handle loading and error states efficiently.
+
+It uses Redux Toolkit for state management and `createAsyncThunk` for async API calls, ensuring a smooth user experience.
+
+---
+
+## Features
+
+- **City Search** – Search weather by city name.
+- **Weather Display** – Temperature, humidity, weather description, and icon.
+- **Favorites** – Add/remove favorite cities stored in `localStorage`.
+- **Last Searched** – Quick access to last searched city.
+- **Routing** – Home page `/` and city page `/city/:name` using React Router.
+- **Loading & Error Handling** – Async states handled with Redux Toolkit.
+- **Responsive UI** – TailwindCSS cards layout.
+- **Environment Variables** – `.env` for API keys.
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React + Vite | Frontend framework and bundler |
+| Redux Toolkit | State management |
+| createAsyncThunk | Async API calls |
+| React Router | Routing between pages |
+| TailwindCSS | Styling and responsive layout |
+| Axios | HTTP requests to OpenWeather API |
+| dotenv | Secure storage of API keys |
+| localStorage | Persisting favorites and last searched city |
+
+---
+
+## Project Structure
+
+```
+weather-app/
+├─ public/
+├─ src/
+│  ├─ components/
+│  │  ├─ WeatherCard.jsx
+│  │  └─ Loader.jsx
+│  ├─ features/
+│  │  └─ weather/
+│  │     ├─ weatherSlice.js
+│  │     └─ weatherAPI.js
+│  ├─ pages/
+│  │  ├─ Home.jsx
+│  │  └─ CityWeather.jsx
+│  ├─ store/
+│  │  └─ store.js
+│  ├─ App.jsx
+│  ├─ main.jsx
+│  └─ index.css
+├─ .env
+├─ package.json
+└─ tailwind.config.js
+```
+
+---
+
+## Setup & Installation
+
+1. **Clone the repository**
+
+```bash
+git clone <repo-url>
+cd weather-app
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Set up TailwindCSS**
+
+```bash
+npx tailwindcss init -p
+```
+
+4. **Create `.env` file**
+
+```
+VITE_WEATHER_API_KEY=your_openweather_api_key
+```
+
+5. **Run the development server**
+
+```bash
+npm run dev
+```
+
+6. **Open in browser**  
+Visit `http://localhost:5173`
+
+---
+
+## Usage
+
+1. Enter a city name in the search input and click **Search**.
+2. View the weather card with temperature, humidity, and description.
+3. Click **Add to Favorites** to save a city.
+4. Navigate to `/city/:name` to see detailed city weather.
+5. Favorite cities and last searched city persist in localStorage for convenience.
+
+---
+
+## Environment Variables
+
+- `VITE_WEATHER_API_KEY` – Your OpenWeather API key.  
+  - Obtain a free key from [OpenWeather](https://openweathermap.org/api).  
+  - Place it in `.env` in the root folder.
+
+```env
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+
+---
+
+## Optimization & Enhancements
+
+- **Favorites and last searched city stored in `localStorage`** to persist state.  
+- **Weather API logic separated in `weatherAPI.js`** for clean architecture.  
+- **Reusable `WeatherCard` component** for modular UI.  
+- **Loader component** for smooth loading state.  
+- **Responsive TailwindCSS layout** for mobile and desktop devices.  
+- **Optional Enhancements:**  
+  - 5-day forecast display using `/forecast` endpoint.  
+  - Skeleton loaders for smoother UI.  
+  - Dark/light mode toggle.  
+  - Error toast notifications.  
+
+---
+
+## License
+
+This project is open-source and free to use under the MIT License.
